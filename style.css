@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+:root {
+    --theme-color: 195;
+    font-size: 62.5%;
+}
+
+html, body, input {
+    font-family: 'Mulish', sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+#app {
+    display: grid;
+    grid-template-rows: max-content 1fr max-content;
+    height: 100vh;
+
+    width: min(244rem, 100%);
+    margin-inline: auto;
+
+    box-sizing: content-box;
+}
+
+.container {
+    display: flex;
+    background: hsl(var(--theme-color), 91%, 25%);
+
+    align-items: center;
+
+    gap: 2.4rem;
+}
+
+#logo {
+    margin: 1.6rem 0 1.6rem 2.8rem;
+}
+
+.input-wrapper label {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    overflow: hidden;
+}
+
+.input-wrapper input {
+    border: 0;
+    width: 100%;
+
+    padding: 1.2rem 1.6rem 1.2rem 1.4rem;
+
+    border-radius: .4rem;
+    
+    background: rgba(255, 255, 255, 0.20);
+    color: #FFFFFF;
+}
+
+.input-wrapper input::placeholder {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.6px;
+
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.input-wrapper {
+    flex: 1;
+}
+
+.avatar {
+    width: 4rem;
+    height: 4rem;
+
+    border-radius: 50%;
+
+    margin: 1.6rem 2.8rem 1.6rem 0;
+}
+
+main {
+    overflow-y: scroll;
+}
+
+#main-content > img {
+    width: 100%;
+}
+
+#main-title {
+    padding-left: 2.2rem;
+    padding-right: 6.4rem;
+
+    margin-top: 3.1rem;
+    margin-bottom: 3.1rem;
+}
+
+#main-title h1 {
+    color: #202024;
+
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 3.6rem;
+
+    padding-bottom: .8rem;
+}
+
+#main-title button {
+    width: 4rem;
+    height: 4rem;
+
+
+    background: hsl(var(--theme-color), 91%, 25%);
+
+    border-radius: 50%;
+    border: none;
+}
+
+#main-title button + button {
+    margin-left: 1.2rem;
+}
+
+#main-title button:nth-of-type(2) img {
+    transform: translateY(.2rem);
+}
+
+#main-text {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+
+    font-size: 1.6rem;
+
+    color: #121214;
+
+    font-weight: 400;
+    line-height: 2.4rem;
+}
+
+aside {
+    margin-top: 3.6rem;
+    margin-bottom: 3.6rem;
+
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+
+}
+
+aside h2 {
+    color: #202024;
+
+    font-size: 2.4rem;
+    font-weight: 700;
+
+    line-height: 3.6rem;
+
+    margin-bottom: 3.2rem;
+}
+
+
+
+.card {
+    display: grid;
+    grid-template-areas: 
+    "img preview";
+
+    align-items: center;
+
+}
+
+.card + .card {
+    margin-top: 3.2rem;
+}
+
+.card img {
+    padding-right: 1.6rem;
+
+    border-radius: .5rem;
+    grid-area: img;
+    object-fit: cover;
+
+}
+
+
+.card h3 {
+    font-size: 1.8rem;
+
+    color: #202024;
+    font-weight: 700;
+    
+    line-height: 2.8rem;
+    padding-bottom: 1.2rem;
+}
+
+.card p {
+    font-size: 1.4rem;
+
+    color: #121214;
+    font-weight: 400;
+
+    line-height: 2.2rem;
+}
+
+footer p {
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1.6rem;
+    font-weight: 600;
+    margin: 0 auto;
+}
+
+/*
+    Se o tamanho de telar for maior que 770px, 
+    as dimensões da página irão mudar
+*/
+@media (min-width: 770px) {
+    main {
+        display: flex;
+        flex-direction: row;
+
+        max-width: fit-content;
+        gap: 3.4rem;
+
+    }
+
+    #main-content {
+        padding: 4.4rem 3.2rem 4.2rem 10.8rem;
+
+    }
+
+    #main-title {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #main-text {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    aside {
+        padding-right:  11.2rem;
+        margin-top: 0;
+    }
+
+    #box {
+        width: 38.4rem;
+    }
+}
+
+@media (max-width: 360px) {
+    
+}
